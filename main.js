@@ -11,13 +11,32 @@ const N=100;
 const cars=generateCars(N);
 let bestCar = cars[0];
 
+let acc = 0.1;
+
+if(localStorage.getItem("acc")){
+    acc = localStorage.getItem("acc");
+}
+
+function High(){
+    localStorage.setItem("acc",
+    JSON.stringify(0.3));
+    acc = 0.1;
+}
+
+function Low(){
+    localStorage.setItem("acc",
+    JSON.stringify(0.1));
+    acc = 0.3;
+}
+
 if(localStorage.getItem("bestBrain")){
     for(let i=0;i<cars.length;i++){
         cars[i].brain = JSON.parse(
             localStorage.getItem("bestBrain"));
 
         if(i!=0){
-            NeuralNetwork.mutate(cars[i].brain,0.2);
+            // console.log(acc);
+            NeuralNetwork.mutate(cars[i].brain,acc);
         }
     }
     

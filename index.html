@@ -8,10 +8,12 @@
     <div id="verticalButtons">
         <button onclick="save()">💾</button>
         <button onclick="discard()">🗑</button>
-        <button onclick="High()">High Mutations</button>
-        <button onclick="Low()">Low Mutations</button>
+        <button onclick="getBestBrain()">Download Best Brain</button>
+        <button onclick="setBestBrain()">Use Trained Neural Network</button>
     </div>
     <canvas id="networkCanvas"></canvas>
+    <!-- <script type="text/javascript" src="BestBrain.json"></script> -->
+    <script src="extraUtils/FileSaver.js"></script>
     <script src="visualizer.js"></script>
     <script src="network.js"></script>
     <script src="sensor.js"></script>

@@ -19,7 +19,7 @@ function getN() {
         // console.log(localStorage.getItem("singleCarBool")-'0');
         return localStorage.getItem("singleCarBool")-'0';
   }
-//   return 3000;
+  return 300;
 }
 
 //  DOWNLOAD BEST BRAIN TO USE LATER

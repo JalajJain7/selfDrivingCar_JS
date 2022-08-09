@@ -2,6 +2,9 @@
 <head>
     <title>Self-driving car - No libraries</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <canvas id="carCanvas"></canvas>
@@ -10,6 +13,17 @@
         <button onclick="discard()">🗑</button>
         <button onclick="getBestBrain()">Download Best Brain</button>
         <button onclick="setBestBrain()">Use Trained Neural Network</button>
+        <button onclick="singleCar()">Use Single Car</button>
+        <!-- <button onclick="multipleCar()">Use Multiple Cars</button> -->
+        
+            <button type="button" data-toggle="collapse" data-target="#demo">Use Multiple Cars</button>
+            <div id="demo" class="collapse" style="width:80px; margin:0 auto;">
+                <button onclick="multipleCar(100)">100 Cars</button> <br>
+                <button onclick="multipleCar(300)">300 Cars</button> <br>
+                <button onclick="multipleCar(1000)">1000 Cars</button> <br>
+                <button onclick="multipleCar(3000)">3000 Cars</button>
+            </div>
+        
     </div>
     <canvas id="networkCanvas"></canvas>
     <!-- <script type="text/javascript" src="BestBrain.json"></script> -->
